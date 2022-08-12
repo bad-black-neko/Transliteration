@@ -1,0 +1,145 @@
+body {
+  font-size: 10px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__text {
+  font-size: 2em;
+}
+.header__text h1 {
+  margin: 15px;
+}
+.header__about {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+.header__about p {
+  margin: 0 5px;
+  text-align: center;
+}
+
+.translator-input-container {
+  background-color: #788efe;
+  padding: 20px;
+  border: 2px solid #42579e;
+  border-radius: 20px;
+}
+.translator-input-container .text-to-translate-input {
+  max-width: 150px;
+  height: 20px;
+  border: 2px solid #42579e;
+  border-radius: 10px;
+}
+.translator-input-container input::-moz-placeholder {
+  color: #000000;
+  text-align: center;
+}
+.translator-input-container input:-ms-input-placeholder {
+  color: #000000;
+  text-align: center;
+}
+.translator-input-container input::placeholder {
+  color: #000000;
+  text-align: center;
+}
+.translator-input-container .translate-text-btn {
+  max-width: 100px;
+  height: 26px;
+  outline: none;
+  cursor: pointer;
+  background-color: #baccff;
+  color: #000000;
+  border: 2px solid #42579e;
+  border-radius: 10px;
+}
+.translator-input-container .translate-text-btn:hover, .translator-input-container .translate-text-btn:active {
+  background-color: #42579e;
+  color: #baccff;
+  border: 2px solid #baccff;
+}
+
+.translate-text-container {
+  display: flex;
+  margin-top: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px;
+}
+.translate-text-container .text-to-translate-container {
+  width: 300px;
+  height: 300px;
+  background-color: #baccff;
+  border: 2px solid #42579e;
+  border-radius: 20px 0px 0px 20px;
+  overflow: scroll;
+}
+.translate-text-container .text-to-translate-container__text {
+  margin: 15px;
+}
+.translate-text-container .translated-text-container {
+  width: 300px;
+  height: 300px;
+  background-color: #baccff;
+  border: 2px solid #42579e;
+  border-radius: 0px 20px 20px 0px;
+  overflow: scroll;
+}
+.translate-text-container .translated-text-container .text-to-translate {
+  margin: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .translate-text-container .text-to-translate, .translate-text-container .translated-text {
+    max-width: 300px;
+    max-height: 200px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .translate-text-container {
+    flex-direction: column;
+  }
+  .translate-text-container .text-to-translate {
+    border-radius: 20px 20px 0px 0px;
+  }
+  .translate-text-container .translated-text {
+    border-radius: 0px 0px 20px 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header__text {
+    font-size: 1.5em;
+  }
+  .translator-input-container {
+    background-color: #788efe;
+    padding: 13px;
+  }
+  .translator-input-container .text-to-translate-input {
+    max-width: 140px;
+  }
+  .translator-input-container input::-moz-placeholder {
+    font-size: 0.9em;
+  }
+  .translator-input-container input:-ms-input-placeholder {
+    font-size: 0.9em;
+  }
+  .translator-input-container input::placeholder {
+    font-size: 0.9em;
+  }
+  .translate-text-container {
+    align-items: center;
+  }
+  .translate-text-container .text-to-translate, .translate-text-container .translated-text {
+    max-width: 250px;
+    max-height: 160px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translator</title>
+
+    <link rel="stylesheet" href="/src/styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header">
+          <div class="header__text"><h1>Transliteration</h1></div>
+          <div class="header__about">
+            <p>Translate any word or phrase from English into Russian</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="translator-input-container">
+        <input class="text-to-translate-input" placeholder="Your text" title="Привет"/>
+        <button class="translate-text-btn">translit</button>
+      </div>
+
+      <div class="translate-text-container">
+        <div class="text-to-translate-container">
+        </div>
+        <div class="translated-text-container"></div>
+      </div>
+    </div>
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
