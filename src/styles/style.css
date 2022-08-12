@@ -28,31 +28,31 @@ body {
   text-align: center;
 }
 
-.translator-input-container {
+.translitor-input-container {
   background-color: #788efe;
   padding: 20px;
   border: 2px solid #42579e;
   border-radius: 20px;
 }
-.translator-input-container .text-to-translate-input {
+.translitor-input-container .text-to-translit-input {
   max-width: 150px;
   height: 20px;
   border: 2px solid #42579e;
   border-radius: 10px;
 }
-.translator-input-container input::-moz-placeholder {
+.translitor-input-container input::-moz-placeholder {
   color: #000000;
   text-align: center;
 }
-.translator-input-container input:-ms-input-placeholder {
+.translitor-input-container input:-ms-input-placeholder {
   color: #000000;
   text-align: center;
 }
-.translator-input-container input::placeholder {
+.translitor-input-container input::placeholder {
   color: #000000;
   text-align: center;
 }
-.translator-input-container .translate-text-btn {
+.translitor-input-container .translit-text-btn {
   max-width: 100px;
   height: 26px;
   outline: none;
@@ -62,20 +62,20 @@ body {
   border: 2px solid #42579e;
   border-radius: 10px;
 }
-.translator-input-container .translate-text-btn:hover, .translator-input-container .translate-text-btn:active {
+.translitor-input-container .translit-text-btn:hover, .translitor-input-container .translate-text-btn:active {
   background-color: #42579e;
   color: #baccff;
   border: 2px solid #baccff;
 }
 
-.translate-text-container {
+.translit-text-container {
   display: flex;
   margin-top: 20px;
   font-size: 1.5em;
   text-align: center;
   padding: 15px;
 }
-.translate-text-container .text-to-translate-container {
+.translit-text-container .text-to-translit-container {
   width: 300px;
   height: 300px;
   background-color: #baccff;
@@ -83,10 +83,10 @@ body {
   border-radius: 20px 0px 0px 20px;
   overflow: scroll;
 }
-.translate-text-container .text-to-translate-container__text {
+.translit-text-container .text-to-translit-container__text {
   margin: 15px;
 }
-.translate-text-container .translated-text-container {
+.translit-text-container .translited-text-container {
   width: 300px;
   height: 300px;
   background-color: #baccff;
@@ -94,24 +94,24 @@ body {
   border-radius: 0px 20px 20px 0px;
   overflow: scroll;
 }
-.translate-text-container .translated-text-container .text-to-translate {
+.translit-text-container .translited-text-container__text {
   margin: 15px;
 }
 
 @media screen and (max-width: 768px) {
-  .translate-text-container .text-to-translate, .translate-text-container .translated-text {
+  .translit-text-container .text-to-translit, .translit-text-container .translited-text {
     max-width: 300px;
     max-height: 200px;
   }
 }
 @media screen and (max-width: 640px) {
-  .translate-text-container {
+  .translit-text-container {
     flex-direction: column;
   }
-  .translate-text-container .text-to-translate {
+  .translit-text-container .text-to-translit-container {
     border-radius: 20px 20px 0px 0px;
   }
-  .translate-text-container .translated-text {
+  .translit-text-container .translited-text-container {
     border-radius: 0px 0px 20px 20px;
   }
 }
@@ -119,26 +119,26 @@ body {
   .header__text {
     font-size: 1.5em;
   }
-  .translator-input-container {
+  .translitor-input-container {
     background-color: #788efe;
     padding: 13px;
   }
-  .translator-input-container .text-to-translate-input {
+  .translitor-input-container .text-to-translit-input {
     max-width: 140px;
   }
-  .translator-input-container input::-moz-placeholder {
+  .translitor-input-container input::-moz-placeholder {
     font-size: 0.9em;
   }
-  .translator-input-container input:-ms-input-placeholder {
+  .translitor-input-container input:-ms-input-placeholder {
     font-size: 0.9em;
   }
-  .translator-input-container input::placeholder {
+  .translitor-input-container input::placeholder {
     font-size: 0.9em;
   }
-  .translate-text-container {
+  .translit-text-container {
     align-items: center;
   }
-  .translate-text-container .text-to-translate, .translate-text-container .translated-text {
+  .translit-text-container .text-to-translit-container, .translit-text-container .translited-text-container {
     max-width: 250px;
     max-height: 160px;
   }

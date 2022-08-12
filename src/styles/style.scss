@@ -27,12 +27,12 @@ body {
         }
     }
 }
-.translator-input-container {
+.translitor-input-container {
     background-color: $inputContainerColor;
     padding: 20px;
     border: 2px solid $borderColor;
     border-radius: 20px;
-    .text-to-translate-input {
+    .text-to-translit-input {
         max-width: 150px;
         height: 20px;
         border: 2px solid #42579e;
@@ -42,7 +42,7 @@ body {
         color: $textColor;
         text-align: center;
     }
-    .translate-text-btn {
+    .translit-text-btn {
         max-width: 100px;
         height: 26px;
         outline: none;
@@ -52,19 +52,19 @@ body {
         border: 2px solid $btnColor;
         border-radius: 10px;
     }
-    .translate-text-btn:hover, .translate-text-btn:active {
+    .translit-text-btn:hover, .translate-text-btn:active {
         background-color: $btnColor;
         color: $btnTextColor;
         border: 2px solid $btnAndInputBorderColor;
     }
 }
-.translate-text-container {
+.translit-text-container {
     display: flex;
     margin-top: 20px;
     font-size: 1.5em;
     text-align: center;
     padding: 15px;
-    .text-to-translate-container {
+    .text-to-translit-container {
         width: 300px;
         height: 300px;
         background-color: $textCaontainerColor;
@@ -75,34 +75,34 @@ body {
             margin: 15px;
         }
     }
-    .translated-text-container {
+    .translited-text-container {
         width: 300px;
         height: 300px;
         background-color: $textCaontainerColor;
         border: 2px solid $borderColor;
         border-radius: 0px 20px 20px 0px;
         overflow: scroll;
-        .text-to-translate {
+        &__text {
             margin: 15px;
         }
     }
 }
 
 @media  screen and (max-width:768px) {
-    .translate-text-container {
-        .text-to-translate, .translated-text {
+    .translit-text-container {
+        .text-to-translit, .translited-text {
             max-width: 300px;
             max-height: 200px;
         }
     }
 }
 @media  screen and (max-width:640px) {
-    .translate-text-container {
+    .translit-text-container {
         flex-direction: column;
-        .text-to-translate {
+        .text-to-translit-container {
             border-radius: 20px 20px 0px 0px;
         }
-        .translated-text {
+        .translited-text-container {
             border-radius: 0px 0px 20px 20px;
         }
     }
@@ -113,19 +113,19 @@ body {
             font-size: 1.5em;
         }
     }
-    .translator-input-container {
+    .translitor-input-container {
         background-color: $inputContainerColor;
         padding: 13px;
-        .text-to-translate-input {
+        .text-to-translit-input {
             max-width: 140px;
         }
         input::placeholder {
             font-size: 0.9em;
         }
     }
-    .translate-text-container {
+    .translit-text-container {
         align-items: center;
-        .text-to-translate,  .translated-text{
+        .text-to-translit-container,  .translited-text-container{
             max-width: 250px;
             max-height: 160px;
         }
