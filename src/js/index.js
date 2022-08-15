@@ -22,27 +22,43 @@ const letters = {
 
 const transliteTextFunc = () => {
   const textToTranslitContainer = document.createElement("div");
-  const textToTranslit = translitTextInput.value;
-  textToTranslitContainer.classList.add("text-to-translit-container__text");
-  textToTranslitBox.append(textToTranslitContainer);
-  textToTranslitContainer.innerText = textToTranslit;
+  textToTranslitContainer.classList.add("text");
 
   const translitedTextContainer = document.createElement("div");
-  translitedTextContainer.classList.add("translited-text-container__text");
-  translitedTextBox.append(translitedTextContainer);
+  translitedTextContainer.classList.add("text");
 
-  let transiltedTextArr = [];
-  for (let i = 0; i < textToTranslit.length; i++) {
-    for (let key in letters) {
-      if (textToTranslit[i] === key) {
-        transiltedTextArr.push(letters[key]);
-      } else if (textToTranslit[i] === letters[key]) {
-        transiltedTextArr.push(key);
-      }
-    }
+  const textToTranslit = translitTextInput.value;
+
+  if (textToTranslit.match(/[a-zA-Z0-9]/)) {
+    alert("Only Cyrillic symbols are allowded");
+  } else {
+    textToTranslitBox.append(textToTranslitContainer);
+    translitedTextBox.append(translitedTextContainer);
+    textToTranslitContainer.innerText = textToTranslit;
+
+    const translitedText = textToTranslit
+      .split("")
+      .map((elem) => {
+        for (let key in letters) {
+          if (elem === key) {
+            return (elem = letters[key]);
+          }
+        }
+      })
+      .join("");
+    translitedTextContainer.innerText = translitedText;
   }
-  const translitedText = transiltedTextArr.join("");
-  translitedTextContainer.innerText = translitedText;
 };
 
 translitBtn.addEventListener("click", transliteTextFunc);
+
+const clearBtn = document.querySelector(".translit-text-clear-btn");
+
+const clearTextFunc = () => {
+  const translitedTextToRemove = document.querySelectorAll(".text");
+  translitedTextToRemove.forEach((elem) => {
+    elem.remove();
+  });
+};
+
+clearBtn.addEventListener("click", clearTextFunc);

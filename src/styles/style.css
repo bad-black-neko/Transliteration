@@ -52,7 +52,7 @@ body {
   color: #000000;
   text-align: center;
 }
-.translitor-input-container .translit-text-btn {
+.translitor-input-container .translit-text-btn, .translitor-input-container .translit-text-clear-btn {
   max-width: 100px;
   height: 26px;
   outline: none;
@@ -63,6 +63,11 @@ body {
   border-radius: 10px;
 }
 .translitor-input-container .translit-text-btn:hover, .translitor-input-container .translate-text-btn:active {
+  background-color: #42579e;
+  color: #baccff;
+  border: 2px solid #baccff;
+}
+.translitor-input-container .translit-text-clear-btn:hover, .translitor-input-container .translit-text-clear-btn:active {
   background-color: #42579e;
   color: #baccff;
   border: 2px solid #baccff;
@@ -83,9 +88,6 @@ body {
   border-radius: 20px 0px 0px 20px;
   overflow: scroll;
 }
-.translit-text-container .text-to-translit-container__text {
-  margin: 15px;
-}
 .translit-text-container .translited-text-container {
   width: 300px;
   height: 300px;
@@ -94,7 +96,8 @@ body {
   border-radius: 0px 20px 20px 0px;
   overflow: scroll;
 }
-.translit-text-container .translited-text-container__text {
+
+.text {
   margin: 15px;
 }
 

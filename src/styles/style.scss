@@ -42,7 +42,7 @@ body {
         color: $textColor;
         text-align: center;
     }
-    .translit-text-btn {
+    .translit-text-btn, .translit-text-clear-btn {
         max-width: 100px;
         height: 26px;
         outline: none;
@@ -53,6 +53,11 @@ body {
         border-radius: 10px;
     }
     .translit-text-btn:hover, .translate-text-btn:active {
+        background-color: $btnColor;
+        color: $btnTextColor;
+        border: 2px solid $btnAndInputBorderColor;
+    }
+    .translit-text-clear-btn:hover, .translit-text-clear-btn:active {
         background-color: $btnColor;
         color: $btnTextColor;
         border: 2px solid $btnAndInputBorderColor;
@@ -71,9 +76,6 @@ body {
         border: 2px solid $borderColor;
         border-radius: 20px 0px 0px 20px;
         overflow: scroll;
-        &__text {
-            margin: 15px;
-        }
     }
     .translited-text-container {
         width: 300px;
@@ -82,10 +84,11 @@ body {
         border: 2px solid $borderColor;
         border-radius: 0px 20px 20px 0px;
         overflow: scroll;
-        &__text {
-            margin: 15px;
-        }
     }
+}
+
+.text {
+    margin: 15px;
 }
 
 @media  screen and (max-width:768px) {
